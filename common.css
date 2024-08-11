@@ -1,0 +1,124 @@
+/* 公共样式 */
+*{
+    /* 去除浏览器样式 */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../image/378459.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* 让图片尽可能填满整个元素 */
+    background-size: cover;
+
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+.nav{
+    /* 导航栏高度一般设置50px */
+    height: 50px;
+    background-color: rgb(50,50,50,0.5);
+    color: white;
+
+    display: flex;
+    align-items: center;
+}
+
+.nav img{
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.nav .spacer{
+    width: 75%;
+}
+
+.container {
+    /* 设置成固定宽度, 水平居中 */
+    width: 1000px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    margin: 0 auto;
+
+    /* 设置高度, 和浏览器窗口一样高 */
+    height: calc(100% - 50px);
+
+    display: flex;
+    /* 让里面的元素能够等间距铺开 */
+    justify-content: space-between;
+}
+
+.container-left {
+    height: 100%;
+    width: 200px;
+}
+
+.container-right {
+    height: 100%;
+    /* 留出来 5px 的缝隙 */
+    width: 795px;
+
+    /* 加上白色半透明背景 */
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+
+    /* 当内容超出范围时, 自动添加滚动条 */
+    overflow: auto;
+}
+
+/* 设置用户信息区域 */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+/* 设置用户头像 */
+.card img {
+    /* 整个 .card 的宽度是 200px, .card 设置了四个方向的内边距, 30px */
+    /* 剩下的能放图片的空间就是 140px */
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+}
+
+/* 设置用户名 */
+.card h3 {
+    text-align: center;
+    /* 这里使用内边距, 把用户名和头像, 撑开一个距离. 使用外边距也是 ok 的 */
+    padding: 10px;
+}
+
+/* 设置 github 地址 */
+.card a {
+    text-align: center;
+    /* 文字设置成灰色 */
+    color: gray;
+    /* 去掉下划线 */
+    text-decoration: none;
+    /* 需要把 a 标签转成块级元素, 上述的文字水平居中才有意义 */
+    display: block;
+    /* 让 a 标签和下方有间隔 */
+    margin-bottom: 10px;
+}
+
+.card .counter {
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+}
