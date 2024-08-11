@@ -1,9 +1,8 @@
 from datetime import datetime
 from datetime import date
 
-
-t1 = datetime.now()
 # 打印当前时间
+t1 = datetime.now()
 print(t1)
 
 # 格式化时间  strftime函数
